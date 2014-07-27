@@ -6,7 +6,8 @@
     (2)Extracts only the measurements on the mean and standard deviation for each measurement. 
     (3)Uses descriptive activity names to name the activities in the data set
     (4)Appropriately labels the data set with descriptive variable names. 
-    (5)Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+    (5)Creates a second, independent tidy data set with the average of each variable for each activity 
+    and each subject. 
     
 Step 1 download and unzip dataset file
 
@@ -27,7 +28,7 @@ Step 3 merge the training & testing data
 
     mergeData <- rbind(trainComplete,testComplete)
     features <- read.table("./UCI HAR Dataset/features.txt")
-    colnames(mergeData) <- c("id","type",as.character(features[[2]]))
+    colnames(mergeData) <- c("id","type",as.character(features[[2]]))  ## this may meet the requirement 4
     completeData <- mergeData [order(mergeData$id,mergeData$type),]
     feat <- grep("*-mean[^a-zA-Z]|-std*", colnames(completeData))
     tidydata1 <- completeData[c("id","type",colnames(completeData[feat]))]
