@@ -14,4 +14,6 @@ type
         walkingDown.  WALKING_DOWNSTAIRS
           walkingUp.  WALKING_UPSTAIRS
             
-            
+#an overview of the rest of the column variables
+the
+    
