@@ -1,4 +1,4 @@
-getting-cleanning-data
+getting-cleaning-data
 ======================
 
 course project
